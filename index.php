@@ -1,10 +1,10 @@
 <?php include('includes/header.php'); ?>
 
-<div class="container py-4">
+<div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-body p-4">
+                <div class="card-body">
                     <div class="text-center">
                         <h3>
                             <a class="text-success text-decoration-none" href="index.php">To-Do List App</a>
@@ -12,12 +12,12 @@
                     </div>
 
                     <!-- Form (CREATE)-->
-                    <form action="create.php" method="POST" class="m-4">
+                    <form action="create.php" method="POST" class="mb-4">
                         <div class="row">
                             <div class="col-md-10">
                                 <input type="text" name="task" id="task" class="form-control" placeholder="Input task here..." required>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 text-right">
                                 <input type="submit" name="submit" class="btn btn-success" value="Save">
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                                             <td><?php echo $count++ ?></td>
                                             <td> <input class="form-control text-center" type="text" name="task" value=" <?php echo $fetch['task_name'] ?> " /> </td>
                                             <td><?php echo $fetch['status'] ?></td>
-                                            <td class="text-center"> <button type="submit" class="btn btn-sm btn-warning">Update</button> </td>
+                                            <td class="text-center"> <button type="submit" class="btn btn-sm btn-warning" style="width: 70px;">Update</button> </td>
                                             <input type="hidden" name="id" value=" <?php echo $fetch['id'] ?> " />
                                         </form>
                                     <?php } else { ?>
@@ -72,18 +72,18 @@
                                                 <?php
                                                 if ($fetch['status'] != "Done") {
                                                     echo
-                                                    '<a href="done_task.php?id=' . $fetch['id'] . '" class="btn btn-sm btn-success">
+                                                    '<a href="done_task.php?id=' . $fetch['id'] . '" class="btn btn-sm btn-success" style="width: 70px;">
                                                         Done
                                                     </a>';
                                                 } else {
                                                     echo
-                                                    '<a href="undone_task.php?id=' . $fetch['id'] . '" class="btn btn-sm btn-secondary">
+                                                    '<a href="undone_task.php?id=' . $fetch['id'] . '" class="btn btn-sm btn-secondary" style="width: 70px;">
                                                         Undone
                                                     </a>';
                                                 }
                                                 ?>
-                                                <a href="index.php?id=<?php echo $fetch['id'] ?>" class="btn btn-sm btn-primary">Edit</a>
-                                                <a href="delete.php?id=<?php echo $fetch['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
+                                                <a href="index.php?id=<?php echo $fetch['id'] ?>" class="btn btn-sm btn-primary" style="width: 70px;">Edit</a>
+                                                <a href="delete.php?id=<?php echo $fetch['id'] ?>" class="btn btn-sm btn-danger" style="width: 70px;">Delete</a>
                                             </td>
                                         </tr>
                                 <?php
