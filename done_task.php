@@ -1,5 +1,5 @@
 <?php
-	require_once 'includes/db.php';
+	include('includes/db.php');
 	
 	if($_GET['id'] != ""){
 		$id = $_GET['id'];

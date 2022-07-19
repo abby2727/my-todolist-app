@@ -1,5 +1,3 @@
-$error;
-
 <?php
     include('includes/db.php');
 
